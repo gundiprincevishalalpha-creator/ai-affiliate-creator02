@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AI Affiliate Creator</title><link rel="stylesheet" href="/style.css">
+</head><body>
+<main>
+<header><div class="logo">AI Affiliate Creator</div><div class="tag">Poster • Reel • Content</div></header>
+<section class="card">
+<h1>Create affiliate content</h1>
+<p class="muted">Paste the product page and your affiliate link.</p>
+<label>Product URL</label><input id="productUrl" placeholder="https://...">
+<label>Affiliate URL</label><input id="affiliateUrl" placeholder="https://...">
+<button id="analyze">Analyze & Create</button>
+<div id="status" class="status"></div>
+</section>
+
+<section id="result" class="hidden">
+<div class="card">
+<h2 id="pname">Product</h2>
+<div class="product"><img id="pimage" alt=""><div>
+<p id="facts"></p><p id="desc" class="muted"></p>
+</div></div>
+</div>
+
+<div class="card"><h2>Poster</h2><canvas id="poster" width="1080" height="1350"></canvas>
+<button id="posterDownload">Download Poster</button></div>
+
+<div class="card"><h2>Reel</h2><p class="muted">Creates a simple 9:16 slideshow reel from the verified product image.</p>
+<video id="preview" controls playsinline></video>
+<button id="makeReel">Create Reel</button><a id="reelDownload" class="button hidden" download="affiliate-reel.webm">Download Reel</a></div>
+
+<div class="card"><h2>Ready-to-post content</h2><textarea id="copy" rows="14"></textarea>
+<button id="copyBtn">Copy Content</button></div>
+</section>
+</main><script src="/app.js"></script></body></html>
